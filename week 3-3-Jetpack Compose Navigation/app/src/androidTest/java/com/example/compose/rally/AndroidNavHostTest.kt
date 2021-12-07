@@ -8,10 +8,11 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import junit.framework.Assert.assertEquals
+
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -56,7 +57,7 @@ class AndroidNavHostTest {
 		}
 		// Then the route is "Bills"
 		val route = navController.currentBackStackEntry?.destination?.route
-		assertEquals(route, "Bills")
+		assertEquals("Bills", route)
 	}
 
 	@Test
